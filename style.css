@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 3em 0;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.primary-color {
+  color: #155f4b;
+}
+
+.secondary-color {
+  color: #878787;
+}
+
+.tertiary-color {
+  color: #a7e7a7;
+}
+
+.bg-primary-color {
+  background: #155f4b;
+}
+
+.bg-secondary-color {
+  background: #878787;
+}
+
+.bg-tertiary-color {
+  background: #a7e7a7;
+}
+
+.bg-fourth-color {
+  background: #f6faf7;
+}
+
+.bg-footer {
+    background: #3a3a3a;
+    padding: 30px 0;
+}
+
+.font-light {
+  color: #fff;
+}
+
+.font-dark {
+  color: #878787;
+}
+
+.btn-success {
+  color: #ffffff !important;
+}
+
+.line {
+  height: 15px;
+  width: 40px;
+}
+
+.lines {
+  display: flex;
+}
+
+.bg-img {
+  background-image: url(img/bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-success {
+  padding: 10px 25px;
+  color: #fff;
+  border: none;
+}
+
+.btn-success:active {
+  border: none;
+}
+
+.btn-area {
+  border: none;
+  padding: 20px 30px;
+  width: 100%;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.split > .btn-area:nth-child(even) {
+  background: #155f4b;
+  color: #fff;
+}
+
+
+@media (min-width: 40em) {
+  h1 {
+    font-size: 56px;
+  }
+  h4 {
+    font-size: 40px;
+  }
+}
