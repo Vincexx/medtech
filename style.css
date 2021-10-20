@@ -53,8 +53,8 @@ section {
 }
 
 .bg-footer {
-    background: #3a3a3a;
-    padding: 30px 0;
+  background: #3a3a3a;
+  padding: 30px 0;
 }
 
 .font-light {
@@ -126,6 +126,23 @@ h4 {
   width: 60px;
 }
 
+.document-areas > div:hover {
+  background: #878787;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+
+.parameters .box {
+  box-shadow: -4px 7px 32px -9px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: -4px 7px 32px -9px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: -4px 7px 32px -9px rgba(0, 0, 0, 0.8);
+}
+
+.parameters .second-box:hover {
+  background: #155f4b;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+} 
 
 @media (min-width: 40em) {
   h1 {
