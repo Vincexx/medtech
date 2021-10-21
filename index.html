@@ -56,27 +56,19 @@
           </div>
         </div>
       </section>
-      <section v-show="!showDocuments">
+      <section v-show="!showDocuments" class="ppp">
         <div class="container">
           <div class="text-center text-md-left mb-3">
             <img src="img/component.png" alt="" class="component" />
           </div>
           <div class="row d-md-flex justify-content-between">
             <div class="col-md-4 mb-3">
-              <h4 class="secondary-color font-bold text-center text-md-left">
+              <h4 class="dark-color font-bold text-center text-md-left">
                 BSMT PROGRAM PERFORMANCE PROFILE (PPP)
               </h4>
             </div>
-            <div class="col-md-6 split">
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
+            <div class="col-md-6 areas">
+                <button class="shadow bg-primary-color font-light font-bold px-5 py-3" v-for="(item, index) in areasByPPP" :key="index">{{ item.name }}</button>
             </div>
           </div>
           <div class="lines mt-4">
@@ -85,27 +77,19 @@
           </div>
         </div>
       </section>
-      <section v-show="!showDocuments" class="bg-img">
+      <section v-show="!showDocuments" class="bg-img cr">
         <div class="container">
           <div class="text-center text-md-left mb-3">
             <img src="img/component.png" alt="" class="component" />
           </div>
           <div class="row d-md-flex justify-content-between">
             <div class="col-md-4 mb-3">
-              <h4 class="secondary-color font-bold text-center text-md-left">
+              <h4 class="dark-color font-bold text-center text-md-left">
                 BSMT Compliance Report
               </h4>
             </div>
-            <div class="col-md-6 split">
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
-              <button class="bg-tertiary-color btn-area">AREA I</button>
+            <div class="col-md-6 areas">
+                <button class="shadow bg-dark font-light font-bold px-5 py-3" v-for="(item, index) in areasByPPP" :key="index">{{ item.name }}</button>
             </div>
           </div>
           <div class="lines mt-4">
@@ -149,7 +133,7 @@
           </div>
           <div>
             <h4 class="font-bold text-center">{{ item.name }}</h1>
-            <div class="box p-md-5 mt-3">
+            <div class="box p-2 p-md-5 mt-3">
 
                <div v-for="(parameter, index) in item.parameters" :key="index">
                   <div v-show="!toggle" @click="showParameter(parameter.id)" class="second-box bg-secondary-color mb-2 p-3 d-flex justify-content-between align-items-center">
@@ -160,7 +144,11 @@
                   
                   <div>
                     <div class="mb-2" v-show="toggle && parameter_id === parameter.id"  v-for="(content, index) in parameter.content" :key="index">
-                        <a href="">{{ content.name }}</a>
+                        <p class="dark-color font-bold mt-3 shadow pl-2">{{ content.title }}</p>
+                        <a href="" class="font-bold">{{ content.name }}</a>
+                        <div class="ml-5">
+                          <a href="" class="d-block" v-for="(subContent, index) in content.subContent" :key="index">{{ subContent.name }}</a>
+                        </div>
                     </div>
                   </div>
                </div>
@@ -171,7 +159,7 @@
         </div>
       </section>
 
-      <footer class="bg-footer" v-show="!showDocuments">
+      <footer class="bg-dark py-4" v-show="!showDocuments">
         <p class="font-light text-center">Copyright &copy; CvSU - Tanza</p>
       </footer>
     </div>

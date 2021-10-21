@@ -36,6 +36,10 @@ section {
   color: #a7e7a7;
 }
 
+.dark-color {
+  color: #3a3a3a;
+}
+
 .bg-primary-color {
   background: #155f4b;
 }
@@ -52,9 +56,8 @@ section {
   background: #f6faf7;
 }
 
-.bg-footer {
+.bg-dark {
   background: #3a3a3a;
-  padding: 30px 0;
 }
 
 .font-light {
@@ -100,14 +103,61 @@ section {
   width: 100%;
 }
 
-.split {
+.ppp .areas {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: center;
 }
 
-.split > .btn-area:nth-child(even) {
-  background: #155f4b;
+.ppp .areas > button {
+   border: none;
+   width: 100%;
+}
+
+.ppp .areas > button:nth-child(even) {
+  background: #3a3a3a;
+}
+
+.ppp .areas > button:nth-child(even):hover {
+  background: #fff;
+  color: #3a3a3a;
+  transition: all ease-in .2s;
+}
+
+.ppp .areas > button:nth-child(odd):hover {
+  background: #fff;
+  color: #3a3a3a;
+  transition: all ease-in .2s;
+}
+
+.cr .areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+
+.cr .areas > button {
+   border: none;
+   width: 100%;
+}
+
+.cr .areas > button:nth-child(even) {
+  background: #155f4b !important;
   color: #fff;
+}
+
+.cr .areas > button:nth-child(even):hover {
+  background: #fff !important;
+  color: #3a3a3a;
+  transition: all ease-in .2s;
+}
+
+.cr .areas > button:nth-child(odd):hover {
+  background: #fff !important;
+  color: #3a3a3a;
+  transition: all ease-in .2s;
 }
 
 h1 {
