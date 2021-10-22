@@ -80,20 +80,43 @@ const app = Vue.createApp({
             },
             {
               id: 2,
-              name: "Parameter B: Student Services Program (SSP)",
-              title: "SYSTEM – INPUTS AND PROCESS",
+              name: "Parameter B: Dissemination and Acceptability",
               content: [
                 { title: "SYSTEM – INPUTS AND PROCESS" },
                 {
-                  name: "S.1 – Thess institution has Student Services Program.",
+                  name: "S.1 – ",
                   link: "",
                 },
                 {
-                  name: "S.2 – Thess institution has Student Services Program.",
+                  name: "S.2 – ",
                   link: "",
+                },
+                { title: "IMPLEMENTATION" },
+                {
+                  name: "I.1 – ",
+                  link: "",
+                },
+                {
+                  name: "I.2 – ",
+                  link: "",
+                  subContent: [
+                    {
+                      name: "I.2.1 – ",
+                      link: "",
+                    },
+                    {
+                      name: "I.2.2 – ",
+                      link: "",
+                    },
+                    {
+                      name: "I.2.3 – ",
+                      link: "",
+                    },
+                  ]
                 },
               ],
             },
+            
           ],
         },
         {
@@ -102,12 +125,23 @@ const app = Vue.createApp({
           areaII: false,
           parameters: [
             {
-              name: "Parameter B: Student Services Program (SSP)",
-              title: "SYSTEM – INPUTS AND PROCESS",
+              id: 1,
+              name: "Parameter A: Student Services Program (SSP)",
               content: [
+                { title: "SYSTEM – INPUTS AND PROCESS" },
                 {
                   name: "S.1 – The institution has Student Services Program.",
                   link: "",
+                  subContent: [
+                    {
+                      name: 'S.1.2',
+                      link: ''
+                    },
+                    {
+                      name: 'S.1.3',
+                      link: ''
+                    }
+                  ]
                 },
                 {
                   name: "S.2 – The institution has Student Services Program.",
@@ -116,7 +150,15 @@ const app = Vue.createApp({
               ],
             },
             {
-              name: "Parameter A: Student Services Program (SSP)",
+              id: 2,
+              name: "Parameter B: Student Services Program (SSP)",
+              content: [
+                { title: 'SYSTEM – INPUTS AND PROCESS' },
+                {
+                  name: 'S.1',
+                  link: ''
+                }
+              ]
             },
           ],
         },
@@ -232,3 +274,4 @@ const app = Vue.createApp({
 });
 
 app.mount("#app");
+

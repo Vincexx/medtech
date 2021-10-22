@@ -192,7 +192,23 @@ h4 {
   background: #155f4b;
   transition: all ease-in 0.2s;
   cursor: pointer;
-} 
+}
+
+.non-active {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.active {
+  background: #155f4b;
+}
+
+.active-content {
+  opacity: 1;
+  transition: all ease-in .3s;
+  display: block;
+  transform: translateX(0);
+}
 
 @media (min-width: 40em) {
   h1 {
