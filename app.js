@@ -204,7 +204,7 @@ const app = Vue.createApp({
         },
       ],
       id: 1,
-      showDocuments: true,
+      showDocuments: false,
       toggle: false,
       parameter_id: null,
       areasByPPP: [
